@@ -1,0 +1,31 @@
+.button {
+    font-size: xx-large;
+    min-width: 100px;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: 1px solid #03a103;
+    color: aqua;
+    background-color: rgba(28,28,28,0);
+    transition: 0.3s;
+    margin: 0 15px;
+
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: green;
+    transition: 0.3s;
+}
+
+.buttonDisabled {
+    font-size: xx-large;
+    min-width: 100px;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: 1px solid red;
+    color: red;
+    background-color: rgba(28,28,28,0);
+    transition: 0.3s;
+    margin: 0 15px;
+    cursor: pointer;
+}
