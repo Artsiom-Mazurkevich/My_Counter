@@ -10,6 +10,9 @@ function App() {
 
     const [maxValue, setMaxValue] = useState<string>(max)
     const [startValue, setStartValue] = useState<string>(start)
+    const [nCounter, setNcounter] = useState<number>(+start)
+
+
     const changeMax = (e: string) => {
         setMaxValue(e)
     }
@@ -18,21 +21,12 @@ function App() {
     }
 
 
-    useEffect(() => {
-        setMaxValue(max)
-        setStartValue(start)
-    }, [max, start])
-
-
-
-
-
 
 
     return (
         <div className={"app"}>
-            <Installer startValue={startValue} maxValue={maxValue} changeStart={changeStart} changeMax={changeMax}/>
-            <Counter />
+            <Installer startValue={startValue} maxValue={maxValue} changeStart={changeStart} changeMax={changeMax} setN={setNcounter}/>
+            <Counter start={nCounter} max={maxValue} setN={setNcounter} m={maxValue} stv={startValue}/>
         </div>
     );
 }
